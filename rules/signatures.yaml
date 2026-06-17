@@ -1,0 +1,15 @@
+threat_signatures:
+  - name: "Piped Stager"
+    description: "Remote execution payload detected"
+    pattern: "(?i)(curl|wget).*\\|\\s*(bash|sh|zsh|python|perl)"
+    severity: "High"
+
+  - name: "Dynamic Execution"
+    description: "Dynamic code execution (eval/exec) detected"
+    pattern: "(?i)(eval\\(|exec\\(|__import__\\('os'\\)\\.system)"
+    severity: "Medium"
+
+  - name: "Wallet Drainer Target"
+    description: "Targeting sensitive crypto wallet directories"
+    pattern: "(?i)(\\.ethereum/keystore|/\\.monad/|/wallet\\.dat)"
+    severity: "Critical"
