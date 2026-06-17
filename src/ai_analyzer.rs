@@ -1,8 +1,4 @@
-// Placeholder for LLM integration
-// Usage: Extract base64/hex payloads and pass them to an external reasoning model 
-// (e.g., Gemini 1.5 Pro or Gemini Cloud) to determine the semantic intent of the code.
-
-pub struct AiAnalyzer {
+    pub struct AiAnalyzer {
     pub api_endpoint: String,
     pub api_key: String,
 }
