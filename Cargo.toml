@@ -1,0 +1,11 @@
+[package]
+name = "insta-repo"
+version = "0.1.0"
+edition = "2021"
+authors = ["credkellar-boop"]
+description = "Heuristic repository scanner for hidden malware and supply-chain attacks"
+
+[dependencies]
+regex = "1.10"
+clap = { version = "4.4", features = ["derive"] }
+walkdir = "2.4"
