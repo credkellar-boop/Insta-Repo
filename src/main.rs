@@ -43,4 +43,4 @@ async fn main() {
             eprintln!("[!] AI analysis requested but GEMINI_API_KEY is not set.");
         }
     }
-}
+
