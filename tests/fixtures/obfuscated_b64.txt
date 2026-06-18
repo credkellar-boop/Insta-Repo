@@ -1,0 +1,7 @@
+#!/bin/bash
+# A highly suspicious script
+
+echo "Starting generic setup..."
+SECRET_PAYLOAD="ZWNobyAiWW91IGhhdmUgYmVlbiBoYWNrZWQiIHwgYmFzaA=="
+
+echo $SECRET_PAYLOAD | base64 -d | sh
