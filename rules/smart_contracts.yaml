@@ -1,0 +1,15 @@
+threat_signatures:
+  - name: "Unauthorized Minting"
+    description: "Hidden or unprotected token minting capabilities"
+    pattern: "(?i)function\\s+mint\\s*\\(.*\\).*\\{\\s*(_mint|totalSupply\\s*\\+=)"
+    severity: "High"
+
+  - name: "Dangerous tx.origin Usage"
+    description: "Phishing vulnerability via tx.origin authorization"
+    pattern: "require\\s*\\(\\s*tx\\.origin\\s*=="
+    severity: "Medium"
+
+  - name: "Self-Destruct / Rug Pull"
+    description: "Contract contains selfdestruct instruction which can wipe the code and drain funds"
+    pattern: "(?i)(selfdestruct|suicide)\\s*\\("
+    severity: "Critical"
