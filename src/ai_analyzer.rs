@@ -56,3 +56,25 @@ impl AiAnalyzer {
         Err("Failed to parse AI response or hit API limits".into())
     }
 }
+            }],
+            "generationConfig": {
+                "temperature": 0.2
+            }
+        });
+
+        let response = self.client.post(&endpoint)
+            .json(&body)
+            .send()
+            .await?;
+
+        if response.status().is_success() {
+            let res_json: serde_json::Value = response.json().await?;
+            // Extract the text from the Gemini response structure
+            if let Some(text) = res_json["candidates"][0]["content"]["parts"][0]["text"].as_str() {
+                return Ok(text.to_string());
+            }
+        }
+
+        Err("Failed to parse AI response or hit API limits".into())
+    }
+}
