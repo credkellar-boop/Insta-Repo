@@ -1,5 +1,7 @@
-1781744900198.png
 # Insta-Repo 🛡️
+<p align="center">
+  <img src="1781744900198.png" alt="Profile Image" width="400"/>
+</p>
 
 ![GitHub stars](https://img.shields.io/github/stars/credkellar-boop/Insta-Repo?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/credkellar-boop/Insta-Repo?style=social)
